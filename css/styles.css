@@ -1,0 +1,321 @@
+:root {
+    --color-nav-bar: #1992D4;
+    --font-size-nav-bar: 22px;
+    --font-size-logo: 32px;
+    --font-size-button: 18px;
+    --font-sizs-title: 22px;
+    --color-nav-bar-text: white;
+    --color-content-text: rgb(100, 100, 100);
+    font-family: 'Roboto';
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/);
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 125vh;
+}
+
+.nav {
+    grid-area: 1 / 1 / -1 / span 3;
+    background-color: var(--color-nav-bar);
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    padding: 0 max(10px, 4.5%);
+}
+
+#logo {
+    display: grid;
+    grid-area: 1 / 1 / span 2 / -1;
+}
+
+#logo .nav-text {
+    font-size: var(--font-size-logo);
+}
+
+.nav-component {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.nav-text {
+    padding-left: 5px;
+    align-self: center;
+    color: var(--color-nav-bar-text);
+    font-size: var(--font-size-nav-bar);
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.icon {
+    justify-self: center;
+    align-self: center;
+}
+
+#logo > .icon > img{
+    width: 6ch;
+    height: auto;
+}
+
+.header {
+    grid-area: 1 / span 11 / span 1 / -1;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+    z-index: 10;  
+}
+
+
+.top {
+    grid-area: 1 / 1 / span 1 /  -1;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    padding: 0 max(20px, 3%);
+    gap: 12px;
+    align-items: center;
+
+}
+
+.top  button {
+    border: none;
+    background-color: transparent;
+}
+
+.top img {
+    width: 100%;
+    height: auto;
+}
+
+.top input {
+    grid-area: 1 / 2 / -1 / span 12;
+    border: none;
+    border-radius: 15px;
+    background-color: #E2E8F0;
+    padding: 5px 7px;
+    font-size: 20px;
+}
+
+.top .notify {
+    grid-area: 1 / span 1 / -1 / -6;
+}
+
+.top .avatar {
+    grid-area: 1 / span 5 / -1 / -1;
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+}
+
+.avatar img {
+    width: auto;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.greeting-img {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.greeting-img img {
+    width: auto;
+    height: 85px;
+    border-radius: 50%;
+    
+}
+
+
+
+
+.bot {
+    grid-area: span 2 / 1 / -1 / -1;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 max(25px, 5%);
+    gap: 5px;
+}
+
+.greeting-img {
+    grid-area: 1 / 1 / -1 / span 1;
+}
+
+.greeting-sentence {
+    align-self:self-end;
+}
+
+.greeting-username {
+    grid-area: span 1 / span 1 / -1 / -1;
+    align-self: center;
+    font-size: var(--font-size-logo);
+    font-weight: 500;
+    align-self: self-start;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 max(20px, 10%);
+    gap: 50px;
+    align-items: center;
+}
+
+.buttons button {
+    background-color: var(--color-nav-bar);
+    color: var(--color-nav-bar-text);
+    border-radius: 20px;
+    border: none;
+    padding: 10px 0;
+    display: grid;
+    font-size: var(--font-size-button);
+    font-weight: 600;
+}
+
+.main {
+    grid-area: span 5 / span 11 / -1 / -1;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    padding: max(15px, 2%) max(5px, 2%);
+    background-color: #E2E8F0;
+    padding-bottom: max(20px, 8%);
+    column-gap: 25px;
+}
+
+#projects {
+    grid-area: 1 / 1 / -1 / span 8;
+    display: grid;
+    grid-template-rows: 1fr 17fr;
+}
+
+.container-project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+.project {
+    background-color: white; 
+    border-radius: 20px;
+    border-left: 15px solid yellow;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 15px 0;   
+}
+
+.project  p, .container-annoucements p {
+    color: var(--color-content-text);
+}
+
+.icons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    direction: rtl;
+    align-items: center;
+    justify-items: center;
+}
+
+.icons img {
+    width: 28px;
+    height: auto;
+}
+
+
+#annoucements {
+    grid-area: 1 / span 3 / span 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.container-annoucements p {
+    font-size: 14px;
+}
+
+.annoucements-title {
+    font-size: 18px;
+    color: black;
+}
+
+.container-annoucements, .container-trending {
+    --side-padding: 35px;
+    background-color: white; 
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    padding: 20px 0;
+}
+
+.container-trending {
+    /* padding: 0; */
+}
+
+#trending {
+    grid-area: span 1 / span 3 / -1 / -1 ;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+
+
+#projects > .title, #annoucements > .title, #trending > .title {
+    font-size: var(--font-sizs-title);
+    display: flex;
+    align-items: center; /* options: flex-start, center, flex-end */
+    font-weight: 500;
+}
+
+
+
+.grid-content {
+    --full-width-start: var(--side-padding,20px);
+    --content: calc(100% - (var(--full-width-start)*2));
+
+    display: grid;
+    grid-template-columns: 
+    [full-width-start] minmax(var(--full-width-start), 1fr)
+    [content-start] var(--content)
+    [content-end] var(--full-width-start)
+    [full-width-end]
+    ;
+    justify-items: start;
+
+
+}
+
+.container-annoucements > div:not(div:first-of-type) {
+    border-top: 1px solid var(--color-content-text);
+}
+
+
+.grid-content > * {
+    grid-column: content;
+}
+
+.container-trending > div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap :20px;
+}
+
+.container-trending img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
