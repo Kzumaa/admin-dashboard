@@ -19,7 +19,7 @@ body {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 125vh;
+    height: 150vh;
 }
 
 .nav {
